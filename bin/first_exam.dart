@@ -1,6 +1,3 @@
-import 'dart:ffi';
-import 'package:first_exam/first_exam.dart' as first_exam;
-
 
 class Person{
   String _firstName;
@@ -12,13 +9,8 @@ class Person{
   }
 
   void show(){
-
    print("Name: ${this._firstName} ${this._lastName}");
-
   }
-
-
-
 }
 
 class Teacher extends Person {
@@ -31,8 +23,6 @@ class Teacher extends Person {
     print("Name: ${super.getFullName} , No of Publication : $_noOfPublications");
 
   }
-
-
 }
 
 class Student extends Person{
@@ -48,15 +38,14 @@ class Student extends Person{
 void main(){
 
   List<Person> personList =[];
-  personList.add(Teacher(firstName:"Afsan", lastName: "akter", noOfpublication: 2));
-  personList.add(Student(firstName:"Afsan", lastName: "akter" , cgpa: 3.80));
-  personList.add(Student(firstName:"akhi", lastName: "akter" , cgpa: 3.0));
-  personList.add(Teacher(firstName:"Afsan", lastName: "akter", noOfpublication: 2));
-  personList.add(Teacher(firstName:"Afsan", lastName: "akter", noOfpublication: 2));
+  personList.add(Teacher(firstName:"Babul", lastName: "Mridha", noOfpublication: 5));
+  personList.add(Teacher(firstName:"Istak", lastName: "Ahmed" , noOfpublication: 10));
+  personList.add(Student(firstName:"Sapon", lastName: "Ahmed" , cgpa: 3.14));
+  personList.add(Teacher(firstName:"Amran", lastName: "Hasan", noOfpublication: 7));
+  personList.add(Student(firstName:"Afsan", lastName: "akter", cgpa: 4.19));
 
   for(Person  person in personList){
     person.show();
   }
-
 
 }
